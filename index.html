@@ -22,16 +22,13 @@
     --text: #1b2a3b;
     --text-light: #5a6e82;
   }
-
   * { box-sizing: border-box; margin: 0; padding: 0; }
-
   body {
     font-family: 'Noto Sans JP', sans-serif;
     background: var(--light);
     color: var(--text);
     min-height: 100vh;
   }
-
   /* HEADER */
   header.title-screen {
     background: linear-gradient(135deg, #eef7e8 0%, #f8fbf4 50%, #e4f0d8 100%);
@@ -124,7 +121,6 @@
     .header-copy { min-width: auto; }
     .brand-logo { max-width: 320px; }
   }
-
   /* STEP PROGRESS */
   .progress-bar {
     background: white;
@@ -170,10 +166,10 @@
   .step-tab.error .step-num { background: #d93025 !important; color: white !important; }
   .step-tab.locked { opacity: 0.38; cursor: not-allowed !important; pointer-events: none; }
   .step-tab div:last-child { display: block; }
-
   /* INPUT VALIDATION */
   .field-error input, .field-error select { border-color: #d93025 !important; box-shadow: 0 0 0 3px rgba(217,48,37,0.1) !important; }
-  .error-msg { display: none; font-size: 11px; color: #d93025; margin-top: 4px; font-weight: 500; }
+  .error-msg { display: none; font-size: 12px; color: #d93025; margin-top: 6px; font-weight: 600; padding: 7px 12px; background: rgba(217,48,37,0.07); border: 1px solid rgba(217,48,37,0.3); border-radius: 6px; }
+  .error-msg::before { content: "⚠ "; }
   .field-error .error-msg { display: block; }
   .step-lock-toast {
     position: fixed; bottom: 28px; left: 50%; transform: translateX(-50%) translateY(80px);
@@ -185,17 +181,14 @@
     white-space: nowrap;
   }
   .step-lock-toast.show { transform: translateX(-50%) translateY(0); }
-
   /* MAIN CONTENT */
   main { max-width: 860px; margin: 0 auto; padding: 28px 16px 60px; }
-
   .section {
     display: none;
     animation: fadeIn 0.3s ease;
   }
   .section.active { display: block; }
   @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
-
   /* CARDS */
   .card {
     background: white;
@@ -223,14 +216,11 @@
     background: var(--blue);
     border-radius: 2px;
   }
-
   /* FORM ELEMENTS */
   .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
   @media (max-width: 560px) { .form-grid { grid-template-columns: 1fr; } }
-
   .form-group { display: flex; flex-direction: column; gap: 6px; }
   .form-group.full { grid-column: 1 / -1; }
-
   label {
     font-size: 12px;
     font-weight: 500;
@@ -242,7 +232,6 @@
     color: var(--gray);
     margin-left: 4px;
   }
-
   input[type="text"].num-input, select {
     border: 1.5px solid var(--border);
     border-radius: 8px;
@@ -256,7 +245,6 @@
     width: 100%;
     -moz-appearance: textfield;
   }
-
   input[type="text"].num-input:focus, select:focus {
     border-color: var(--sky);
     box-shadow: 0 0 0 3px rgba(61,143,212,0.12);
@@ -271,7 +259,6 @@
     font-size: 12px; color: var(--gray);
     pointer-events: none;
   }
-
   /* TOGGLE */
   .toggle-group {
     display: flex;
@@ -296,7 +283,6 @@
     background: rgba(26, 95, 168, 0.07);
     color: var(--blue);
   }
-
   /* RADIO CARDS */
   .radio-cards { display: flex; gap: 10px; flex-wrap: wrap; }
   .radio-card {
@@ -314,7 +300,6 @@
   .radio-card input { display: none; }
   .radio-card .rc-label { font-size: 13px; font-weight: 500; color: var(--text); }
   .radio-card .rc-sub { font-size: 11px; color: var(--gray); margin-top: 2px; }
-
   /* INFO BOX */
   .info-box {
     background: rgba(26,95,168,0.05);
@@ -327,7 +312,6 @@
     line-height: 1.7;
   }
   .info-box strong { color: var(--blue); }
-
   /* EARNER SECTION */
   .earner-block {
     border: 1.5px solid var(--border);
@@ -357,7 +341,6 @@
     background: rgba(224,92,26,0.1);
     color: var(--accent2);
   }
-
   /* BUTTONS */
   .btn-row { display: flex; gap: 12px; margin-top: 24px; justify-content: flex-end; }
   .btn {
@@ -382,7 +365,6 @@
     color: var(--text-light);
   }
   .btn-secondary:hover { border-color: var(--sky); color: var(--blue); }
-
   /* RESULT SECTION */
   .result-hero {
     background: linear-gradient(135deg, var(--navy) 0%, #1d3d6b 100%);
@@ -419,11 +401,9 @@
   }
   .result-amount span { font-size: 18px; vertical-align: super; font-family: 'Noto Sans JP', sans-serif; }
   .result-sub { font-size: 12px; color: rgba(255,255,255,0.5); }
-
   /* RESULT CARDS */
   .result-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 16px; }
   @media (max-width: 560px) { .result-grid { grid-template-columns: 1fr; } }
-
   .result-card {
     background: white;
     border: 1px solid var(--border);
@@ -435,7 +415,6 @@
   .result-card-value.positive { color: var(--success); }
   .result-card-value.negative { color: #e05c5c; }
   .result-card-sub { font-size: 11px; color: var(--gray); margin-top: 4px; }
-
   /* ZONE BADGE */
   .zone-badge {
     display: inline-flex; align-items: center; gap: 8px;
@@ -449,7 +428,6 @@
   .zone-III { background: rgba(240,165,0,0.12); color: #c07800; border: 1.5px solid rgba(240,165,0,0.35); }
   .zone-IV { background: rgba(224,92,26,0.1); color: var(--accent2); border: 1.5px solid rgba(224,92,26,0.3); }
   .zone-none { background: rgba(138,155,176,0.12); color: var(--gray); border: 1.5px solid var(--border); }
-
   /* SUPPORT TABLE */
   .support-table {
     width: 100%;
@@ -482,7 +460,6 @@
   .support-table .tag.no {
     background: rgba(138,155,176,0.1); color: var(--gray);
   }
-
   /* LOAN RESULT */
   .loan-result {
     border: 1.5px solid var(--border);
@@ -504,7 +481,6 @@
   .loan-status.ok { background: rgba(29,170,114,0.12); color: var(--success); }
   .loan-status.ng { background: rgba(138,155,176,0.1); color: var(--gray); }
   .loan-threshold { font-size: 11px; color: var(--gray); margin-left: 12px; }
-
   /* CALC DETAIL */
   .calc-detail {
     background: var(--light);
@@ -519,7 +495,6 @@
   .calc-row { display: flex; justify-content: space-between; padding: 4px 0; border-bottom: 1px dashed rgba(208,220,232,0.6); }
   .calc-row:last-child { border-bottom: none; font-weight: 700; color: var(--text); padding-top: 8px; }
   .calc-row span:last-child { font-weight: 600; }
-
   /* WARNING */
   .warning {
     background: rgba(224,92,26,0.06);
@@ -532,7 +507,6 @@
     display: flex; gap: 10px; align-items: flex-start;
   }
   .warning-icon { font-size: 18px; flex-shrink: 0; }
-
   .section-subtitle {
     font-size: 11px;
     font-weight: 500;
@@ -542,13 +516,11 @@
     margin-bottom: 16px;
     margin-top: 8px;
   }
-
   .divider {
     border: none;
     border-top: 1px solid var(--border);
     margin: 20px 0;
   }
-
   .recalc-btn {
     display: block; width: 100%;
     padding: 14px;
@@ -561,13 +533,11 @@
     transition: all 0.18s;
   }
   .recalc-btn:hover { opacity: 0.9; transform: translateY(-1px); }
-
   .no-result {
     text-align: center; padding: 40px 20px;
     color: var(--gray);
   }
   .no-result .big-icon { font-size: 40px; margin-bottom: 12px; }
-
   /* CHECKBOX CUSTOM */
   .check-item {
     display: flex; align-items: center; gap: 10px;
@@ -628,10 +598,8 @@
   }
   .check-item-text { font-size: 13px; font-weight: 500; }
   .check-item-sub { font-size: 11px; color: var(--gray); }
-
   .checks-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
   @media (max-width: 560px) { .checks-grid { grid-template-columns: 1fr; } }
-
   /* SCHOLARSHIP TYPE SELECT */
   .type-select-grid {
     display: grid;
@@ -668,13 +636,10 @@
   .type-badge-blue { background: rgba(26,95,168,0.1); color: var(--blue); }
   .type-badge-green { background: rgba(29,170,114,0.1); color: var(--success); }
   .type-badge-gold { background: rgba(240,165,0,0.15); color: #c07800; }
-
   /* FIELD VISIBILITY */
   .field-kyufu, .field-taiyo, .field-both { transition: all 0.2s; }
   .hidden-field { display: none !important; }
-
   /* ===== RESULT REDESIGN ===== */
-
   /* Hero blocks */
   .res-hero {
     border-radius: 16px; padding: 28px 24px; margin-bottom: 16px;
@@ -684,12 +649,10 @@
   .res-hero-warn { background: linear-gradient(135deg, #2a1800 0%, #3d2200 100%); color: white; }
   .res-hero-ng   { background: linear-gradient(135deg, var(--navy) 0%, #1d3d6b 100%); color: white; }
   .res-hero-taiyo{ background: linear-gradient(135deg, #0d1b2a 0%, #1d3560 100%); color: white; }
-
   .res-hero-label {
     font-size: 11px; letter-spacing: 2px; text-transform: uppercase;
     color: rgba(255,255,255,0.55); margin-bottom: 14px; font-weight: 500;
   }
-
   /* 区分バッジ（大） */
   .res-zone-big {
     display: inline-block;
@@ -698,11 +661,9 @@
     margin-bottom: 14px; letter-spacing: 2px;
     border: 2px solid currentColor;
   }
-
   .res-hero-sub {
     font-size: 13px; color: rgba(255,255,255,0.65); margin-top: 4px;
   }
-
   /* 給付型 内訳アイコン行 */
   .res-kyufu-amount {
     display: flex; align-items: center; justify-content: center;
@@ -719,20 +680,16 @@
     margin-top: 3px; white-space: nowrap;
   }
   .res-kyufu-plus { font-size: 22px; color: rgba(255,255,255,0.4); font-weight: 300; padding: 0 2px; }
-
   .res-note-sm { font-size: 10px; color: rgba(255,255,255,0.4); margin-top: 10px; }
-
   /* 貸与型 大見出し */
   .res-taiyo-best {
     font-size: clamp(18px,4vw,26px); font-weight: 900;
     color: var(--accent); margin: 12px 0 8px; line-height: 1.3;
   }
-
   /* NG badge */
   .res-ng-badge {
     font-size: 32px; font-weight: 900; color: #e05c5c; margin: 12px 0 8px;
   }
-
   /* 計算式ボックス */
   .formula-box {
     background: #f8f2e8; border: 1px solid rgba(240,165,0,0.3);
@@ -746,7 +703,6 @@
     word-break: break-all;
   }
   .formula-note { font-size: 10px; color: #9a7030; margin-top: 6px; }
-
   /* 計算式行 */
   .calc-row-formula {
     display: grid; grid-template-columns: minmax(120px, max-content) 1fr auto;
@@ -764,7 +720,6 @@
   .calc-row-total .cfr-label,
   .calc-row-total .cfr-result { color: var(--blue); font-size: 13px; }
   .deduct-row .cfr-result { color: #d93025; }
-
   /* 区分テーブル */
   .zone-table-wrap { overflow-x: auto; margin: 16px 0; }
   .zone-table {
@@ -785,7 +740,6 @@
     display: inline-block; padding: 2px 10px; border-radius: 20px;
     font-size: 11px; font-weight: 700; white-space: nowrap;
   }
-
   /* 資産チェック */
   .asset-check {
     display: flex; justify-content: space-between; align-items: center;
@@ -794,7 +748,6 @@
   }
   .asset-ok { background: rgba(29,170,114,0.08); color: var(--success); border: 1px solid rgba(29,170,114,0.25); }
   .asset-ng { background: rgba(217,48,37,0.07); color: #d93025; border: 1px solid rgba(217,48,37,0.25); }
-
   /* 貸与型カード */
   .taiyo-cards { display: grid; grid-template-columns: repeat(3,1fr); gap: 10px; margin-top: 4px; }
   @media (max-width:560px) { .taiyo-cards { grid-template-columns: 1fr; } }
@@ -812,7 +765,6 @@
   .tc-ok .tc-badge { color: var(--success); }
   .tc-ng .tc-badge { color: var(--gray); }
   .tc-threshold { font-size: 10px; color: var(--gray); }
-
   /* 補足ボックス */
   .supplement-box {
     background: var(--light); border: 1px solid var(--border);
@@ -827,8 +779,6 @@
     padding-left: 12px; position: relative;
   }
   .supplement-list li::before { content: '・'; position: absolute; left: 0; }
-
-
   /* SCHOOL SELECT */
   .school-select-grid {
     display: grid;
@@ -837,7 +787,6 @@
   }
   .school-select-grid .radio-card { min-width: 0; }
   @media (max-width: 560px) { .school-select-grid { grid-template-columns: 1fr; } }
-
   .amount-result-box {
     background: linear-gradient(135deg, rgba(26,95,168,0.06), rgba(61,143,212,0.08));
     border: 1px solid rgba(26,95,168,0.18);
@@ -875,8 +824,6 @@
     display:inline-block; padding: 4px 10px; border-radius: 999px; font-size: 11px; font-weight:700;
     background: rgba(26,95,168,0.1); color: var(--blue);
   }
-
-
   .taiyo-card.tc-warn {
     border-color: #d93025;
     background: rgba(217,48,37,0.06);
@@ -928,8 +875,6 @@
   }
   .heikyu-meta-label { font-size: 10px; color: #99504c; font-weight: 700; letter-spacing: 0.5px; margin-bottom: 6px; }
   .heikyu-meta-value { font-size: 13px; color: #5a2a26; font-weight: 700; line-height: 1.7; }
-
-
   .summary-card {
     border: 1px solid #d9e6d3;
     background: linear-gradient(180deg, #ffffff 0%, #f7fbf3 100%);
@@ -949,7 +894,6 @@
     padding:6px 10px; border-radius:999px; font-size:.87rem; font-weight:700;
     background:#eef5fb; color:var(--blue); border:1px solid #d7e5f2;
   }
-
   .tashi-neutral { background: #f5f7fa; color: #556270; border: 1px solid #d9e2ec; }
   .tashi-positive { background: rgba(29,170,114,0.08); color: var(--success); border: 1px solid rgba(29,170,114,0.25); }
   .summary-text {
@@ -969,11 +913,9 @@
   @media (max-width: 768px) {
     .summary-list { grid-template-columns: 1fr; }
   }
-
 </style>
 </head>
 <body>
-
 <header class="title-screen">
   <div class="header-inner">
     <div class="brand-logo-wrap">
@@ -987,7 +929,6 @@
     </div>
   </div>
 </header>
-
 <div class="progress-bar">
   <div class="progress-inner">
     <div class="step-tab active" id="tab-1" onclick="goStep(1, false)">
@@ -1016,14 +957,11 @@
     </div>
   </div>
 </div>
-
 <div class="step-lock-toast" id="lock-toast">⚠ まず奨学金の種別を選択してください</div>
 <main>
-
 <!-- STEP 1: 奨学金種別選択 -->
 <div class="section active" id="step-1">
   <p class="section-subtitle">Step 1 — まず、検討している奨学金の種別を選んでください</p>
-
   <div class="card">
     <div class="card-title">奨学金の種別</div>
     <div class="type-select-grid">
@@ -1050,18 +988,13 @@
       ▲ 上のカードをタップして選択してください
     </div>
   </div>
-
   <div class="btn-row">
     <button class="btn btn-primary" id="btn-step1-next" onclick="goStep(2, true)" disabled style="opacity:0.4;cursor:not-allowed">次へ：家族構成を入力 →</button>
   </div>
 </div>
-
 <!-- STEP 2: 家族構成 -->
 <div class="section" id="step-2">
   <p class="section-subtitle">Step 2 — 家族・学生の基本情報</p>
-
-
-
   <div class="card">
     <div class="card-title">生計維持者 <a href="https://www.jasso.go.jp/shogakukin/about/kyufu/kakei/seikei_izisha.html" target="_blank" rel="noopener noreferrer">生計維持者について</a></div>
     <div class="form-group">
@@ -1072,7 +1005,6 @@
       </div>
     </div>
   </div>
-
   <div class="card">
     <div class="card-title">扶養している子の人数</div>
     <div class="form-group">
@@ -1084,23 +1016,19 @@
       <div class="error-msg" id="err-num-children">人数は半角数字で入力してください</div>
     </div>
   </div>
-
   <div class="btn-row">
     <button class="btn btn-secondary" onclick="goStep(1, true)">← 戻る</button>
-    <button class="btn btn-primary" onclick="goStep(3, true)">次へ：収入情報を入力 →</button>
+    <button class="btn btn-primary" onclick="goStep2Next()">次へ：収入情報を入力 →</button>
   </div>
 </div>
-
 <!-- STEP 3: 収入情報 -->
 <div class="section" id="step-3">
   <p class="section-subtitle">Step 3 — 住民税情報の入力</p>
-
   <div class="info-box" style="margin-bottom:16px">
     <strong>入力が必要な値：</strong>住民税の課税証明書（または市区町村の住民税通知書）を確認してください。<br>
     ①課税標準額　②市町村民税_調整控除額
     <span id="hint-adjust3"> 　③市町村民税_調整額（給付型のみ）</span>
   </div>
-
   <div class="card">
     <div class="card-title">居住市区町村の種別</div>
     <div class="form-group">
@@ -1115,10 +1043,8 @@
       <a href="https://www.soumu.go.jp/main_sosiki/jichi_gyousei/bunken/shitei_toshi-ichiran.html" target="_blank" rel="noopener noreferrer">総務省 指定都市一覧を確認する</a>
     </div>
   </div>
-
   <div class="card">
     <div class="card-title">生計維持者の住民税情報</div>
-
     <div class="earner-block">
       <div class="earner-label">
         <span class="earner-tag">生計維持者 1</span>（父・母 等）
@@ -1150,7 +1076,6 @@
         </div>
       </div>
     </div>
-
     <div id="earner2-block" class="earner-block">
       <div class="earner-label">
         <span class="earner-tag" style="background:rgba(224,92,26,0.1);color:var(--accent2)">生計維持者 2</span>（父・母 等）
@@ -1195,7 +1120,6 @@
       </div>
     </div>
   </div>
-
   <!-- 学生本人（給付型のみ） -->
   <div class="card field-kyufu" id="student-income-card">
     <div class="card-title">学生本人の住民税情報</div>
@@ -1241,17 +1165,14 @@
       </div>
     </div>
   </div>
-
   <div class="btn-row">
     <button class="btn btn-secondary" onclick="goStep(2, true)">← 戻る</button>
-    <button class="btn btn-primary" onclick="goStep(4, true)">次へ：資産・控除 →</button>
+    <button class="btn btn-primary" onclick="goStep3Next()">次へ：資産・控除 →</button>
   </div>
 </div>
-
 <!-- STEP 4: 資産・控除 -->
 <div class="section" id="step-4">
   <p class="section-subtitle">Step 4 — 資産情報・各種控除</p>
-
   <!-- 資産基準（給付型のみ） -->
   <div class="card field-kyufu" id="asset-card">
     <div class="card-title">資産基準 <span class="hint">（給付型奨学金計算用）</span></div>
@@ -1266,13 +1187,11 @@
           <div class="rc-label">5000万円未満</div>
           <div class="rc-sub">給付型奨学金・授業料等減免の判定対象</div>
         </label>
-
         <label class="radio-card asset-radio-card">
           <input type="radio" name="assetLevel" value="5000to3oku">
           <div class="rc-label">5000万円以上 ～ 3億円未満</div>
           <div class="rc-sub">多子世帯の場合のみ授業料等減免の判定対象</div>
         </label>
-
         <label class="radio-card asset-radio-card">
           <input type="radio" name="assetLevel" value="over3oku">
           <div class="rc-label">3億円以上</div>
@@ -1285,7 +1204,6 @@
       該当する資産区分を選択してください。
     </div>
   </div>
-
   <!-- 各種控除（貸与型） -->
   <div class="card field-taiyo" id="deduction-card">
     <div class="card-title">各種控除</div>
@@ -1327,29 +1245,24 @@
       <strong>私立自宅外控除</strong> は <strong>在学採用のみ</strong> チェック可能です。
     </div>
   </div>
-
   <!-- 貸与型なし時のメッセージ -->
   <div class="info-box field-kyufu-only" id="no-taiyo-msg" style="display:none">
     給付型のみを選択しているため、貸与型の控除設定は不要です。
   </div>
-
   <div class="btn-row">
     <button class="btn btn-secondary" onclick="goStep(3, true)">← 戻る</button>
     <button class="btn btn-primary" onclick="goStep(5, true)">次へ：学校情報を入力 →</button>
   </div>
 </div>
-
 <!-- STEP 5: 学校情報 -->
 <div class="section" id="step-5">
   <p class="section-subtitle">Step 5 — 学校種別・通学区分</p>
-
   <div class="card field-kyufu" id="school-info-card">
     <div class="card-title">学校情報（給付型の金額表示用）</div>
     <div class="info-box" style="margin-bottom:16px">
       給付型奨学金の <strong>月額表示</strong> と <strong>授業料等減免額表示</strong> に使用します。<br>
       Excelの表に合わせて、<strong>設置区分</strong>・<strong>学校種別</strong>・<strong>自宅 / 自宅外</strong> を選択してください。
     </div>
-
     <div class="form-grid">
       <div class="form-group full">
         <label>設置区分</label>
@@ -1358,7 +1271,6 @@
           <button class="toggle-btn" onclick="selectToggle(this,'school-sector','private')">私立</button>
         </div>
       </div>
-
       <div class="form-group full">
         <label>学校の種別</label>
         <div class="school-select-grid">
@@ -1384,7 +1296,6 @@
           </div>
         </div>
       </div>
-
       <div class="form-group full">
         <label>通学形態</label>
         <div class="toggle-group">
@@ -1392,7 +1303,6 @@
           <button class="toggle-btn" onclick="selectToggle(this,'commute','jitakugai')">自宅外通学</button>
         </div>
       </div>
-
       <div class="form-group full">
         <label>理工農系の学校への進学を希望していますか？ <span class="hint">（第Ⅳ区分の授業料等減免判定用）</span></label>
         <div class="toggle-group">
@@ -1405,7 +1315,6 @@
           理工農系の対象校は、<a href="https://www.mext.go.jp/a_menu/koutou/hutankeigen/1421838_00004.htm" target="_blank" rel="noopener noreferrer">私立理工農系の学校リスト</a> を参考にしてください。
         </div>
       </div>
-
       <div class="form-group full">
         <label>特例区分</label>
         <div class="toggle-group">
@@ -1414,33 +1323,27 @@
         </div>
       </div>
     </div>
-
     <div class="info-box" style="margin-top:12px">
       生活保護（扶助の種類を問いません。）を受けている生計維持者と同居している人、
       または社会的養護を必要とする人で児童養護施設等から通学する人は、
       上表の<strong>カッコ内の金額</strong>を表示します。
     </div>
   </div>
-
   <div class="info-box field-taiyo" id="school-info-skip-msg">
     貸与型のみを選択している場合、このステップの入力は結果表示に影響しません。
   </div>
-
   <div class="btn-row">
     <button class="btn btn-secondary" onclick="goStep(4, true)">← 戻る</button>
     <button class="btn btn-primary" onclick="calculate()">試算する →</button>
   </div>
 </div>
-
 <!-- STEP 6: 結果 -->
 <div class="section" id="step-6">
   <p class="section-subtitle">Step 6 — シミュレーション結果</p>
   <div id="result-content"></div>
   <button class="recalc-btn" onclick="goStep(1, true)">← 入力内容を修正して再試算</button>
 </div>
-
 </main>
-
 <script>
 // ===== STATE =====
 const state = {
@@ -1453,13 +1356,11 @@ const state = {
   'special-support': 'no',
   scholarshipType: null
 };
-
 const APP = {
   initialized: false,
   warnedMissingIds: new Set(),
   timeouts: new Map()
 };
-
 function byId(id, required = false) {
   const el = document.getElementById(id);
   if (!el && required && !APP.warnedMissingIds.has(id)) {
@@ -1468,7 +1369,6 @@ function byId(id, required = false) {
   }
   return el;
 }
-
 function bindOnce(el, key, eventName, handler) {
   if (!el) return;
   const flag = `bound${key}${eventName}`;
@@ -1476,7 +1376,6 @@ function bindOnce(el, key, eventName, handler) {
   el.addEventListener(eventName, handler);
   el.dataset[flag] = '1';
 }
-
 function safeCall(fn) {
   try {
     if (typeof fn === 'function') fn();
@@ -1484,25 +1383,20 @@ function safeCall(fn) {
     console.error('[APP] function failed:', err);
   }
 }
-
 function refreshScholarshipTypeUI() {
   document.querySelectorAll('.type-card').forEach(c => c.className = 'type-card');
   const t = state.scholarshipType;
   if (!t) return;
-
   const classMap = { kyufu: 'selected', taiyo: 'selected-green', both: 'selected-both' };
   const card = byId('type-' + t, true);
   if (card && classMap[t]) card.classList.add(classMap[t]);
-
   const hints = {
     kyufu: '✅ <strong>給付型のみ</strong>を選択。返還不要の給付型奨学金と授業料減免を試算します。',
     taiyo: '✅ <strong>貸与型のみ</strong>を選択。第一種（無利子）・第二種（有利子）の採用可否を試算します。',
     both:  '✅ <strong>給付型　貸与型　両方まとめて</strong>を選択。給付型・貸与型を一括試算します。'
   };
-
   const hint = byId('type-hint', true);
   if (hint && hints[t]) hint.innerHTML = hints[t];
-
   const btn = byId('btn-step1-next');
   if (btn) {
     btn.disabled = false;
@@ -1510,22 +1404,18 @@ function refreshScholarshipTypeUI() {
     btn.style.cursor = 'pointer';
   }
 }
-
 function initializeDefaultStateFromDOM() {
   const checkedAsset = document.querySelector('input[name="assetLevel"]:checked');
   if (checkedAsset && !state.assetLevel) state.assetLevel = checkedAsset.value;
 }
-
 function isChecked(id) {
   const el = byId(id);
   return !!(el && el.checked);
 }
-
 function safeSetDisplay(id, show) {
   const el = byId(id);
   if (el) el.style.display = show ? 'block' : 'none';
 }
-
 function safeScrollTop() {
   try {
     window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -1533,9 +1423,7 @@ function safeScrollTop() {
     window.scrollTo(0, 0);
   }
 }
-
 let refreshTimer = null;
-
 function refreshAllFromState() {
   safeCall(refreshScholarshipTypeUI);
   safeCall(applyTypeVisibility);
@@ -1544,7 +1432,6 @@ function refreshAllFromState() {
   safeCall(syncAssetLevelUI);
   safeCall(updateTabErrors);
 }
-
 function requestRefresh() {
   if (refreshTimer) clearTimeout(refreshTimer);
   refreshTimer = setTimeout(() => {
@@ -1552,16 +1439,13 @@ function requestRefresh() {
     refreshTimer = null;
   }, 0);
 }
-
 function setStateValue(key, value) {
   state[key] = value;
   requestRefresh();
 }
-
 function syncAllUI() {
   refreshAllFromState();
 }
-
 // ===== SCHOLARSHIP TYPE =====
 function selectType(type) {
   if (!['kyufu', 'taiyo', 'both'].includes(type)) return;
@@ -1569,7 +1453,6 @@ function selectType(type) {
   safeCall(lockTabs);
   requestRefresh();
 }
-
 function applyTypeVisibility() {
   const t = state.scholarshipType;
   if (!t) return;
@@ -1586,7 +1469,6 @@ function applyTypeVisibility() {
   const noTaiyoMsg = document.getElementById('no-taiyo-msg');
   if (noTaiyoMsg) noTaiyoMsg.style.display = (!showT && showK) ? 'block' : 'none';
 }
-
 // ===== TOGGLE =====
 function selectToggle(btn, key, val) {
   state[key] = val;
@@ -1595,37 +1477,28 @@ function selectToggle(btn, key, val) {
   if (btn) btn.classList.add('selected');
   requestRefresh();
 }
-
 function toggleCheck(el, key) {
   if (!el || el.classList.contains('disabled')) return;
-
   const cb = el.querySelector('input[type=checkbox]');
   const nextChecked = cb ? !cb.checked : !el.classList.contains('checked');
-
   el.classList.toggle('checked', nextChecked);
-
   if (cb) cb.checked = nextChecked;
-
   const ck = el.querySelector('.checkmark');
   if (ck) {
     ck.removeAttribute('style');
     ck.textContent = nextChecked ? '✓' : '';
   }
-
   if (key) {
     state[key] = nextChecked ? 'yes' : 'no';
   }
-
   requestRefresh();
 }
-
 function updateEarners() {
   const count = state['earner-count'];
   const earner2Block = document.getElementById('earner2-block');
   if (earner2Block) {
     earner2Block.style.display = count === '2' ? 'block' : 'none';
   }
-
   const toggleGroup = document.querySelector('.toggle-group');
   if (toggleGroup) {
     toggleGroup.querySelectorAll('.toggle-btn').forEach((btn) => {
@@ -1634,14 +1507,11 @@ function updateEarners() {
       btn.classList.toggle('selected', (count === '2' && isTwo) || (count === '1' && isOne));
     });
   }
-
   syncAutoDeductions();
 }
-
 function syncAutoDeductions() {
   const count = state['earner-count'];
   const numChildren = getNum('num-children', 1);
-
   const singleParentEl = document.getElementById('single-parent-check2');
   const singleParentCb = document.getElementById('single-parent2');
   const singleParentSub = document.getElementById('single-parent-sub');
@@ -1656,7 +1526,6 @@ function syncAutoDeductions() {
       singleParentSub.textContent = singleParentChecked ? '－40,000円' : '－0円（生計維持者1名のとき適用）';
     }
   }
-
   const multiEl = document.getElementById('multi-child-check2');
   const multiCb = document.getElementById('multi-child2');
   const multiSub = document.getElementById('multi-child-sub');
@@ -1675,19 +1544,14 @@ function syncAutoDeductions() {
         : '－0円（扶養する子が3人以上で適用）';
     }
   }
-
   updateTashiIndicator();
   syncAdoptionTypeUI();
 }
-
 function updateTashiIndicator() {
   const box = document.getElementById('tashi-indicator');
   const numChildren = Math.max(0, Math.floor(getNum('num-children', 0)));
-
   if (!box) return;
-
   box.classList.remove('tashi-neutral', 'tashi-positive', 'asset-ok', 'asset-ng');
-
   if (numChildren >= 3) {
     box.classList.add('tashi-positive');
     box.innerHTML = '<strong>多子世帯：</strong>該当します（3人以上）';
@@ -1696,14 +1560,12 @@ function updateTashiIndicator() {
     box.innerHTML = '<strong>多子世帯：</strong>該当しません';
   }
 }
-
 function syncAdoptionTypeUI() {
   const adoptionTypeEl = document.getElementById('adoption-type');
   const privateAwayEl = document.getElementById('private-away-check');
   const privateAwayCb = document.getElementById('private-away');
   const privateAwaySub = document.getElementById('private-away-sub');
   if (!adoptionTypeEl || !privateAwayEl || !privateAwayCb) return;
-
   const isZaigaku = adoptionTypeEl.value === 'zaigaku';
   privateAwayEl.classList.toggle('disabled', !isZaigaku);
   if (!isZaigaku) {
@@ -1718,29 +1580,24 @@ function syncAdoptionTypeUI() {
       : '－22,000円（予約採用では選択不可）';
   }
 }
-
 function togglePrivateAway(el) {
   if (el.classList.contains('disabled')) return;
   toggleCheck(el, 'private-away');
 }
-
 function selectSchoolType(type) {
   state['school-type'] = type;
   document.querySelectorAll('[id^="school-type-"]').forEach(el => el.classList.remove('selected'));
   const target = document.getElementById('school-type-' + type);
   if (target) target.classList.add('selected');
 }
-
 function toggleEarner2() {
   const checked = isChecked('e2-nontaxable');
   safeSetDisplay('e2-inputs', !checked);
 }
-
 function toggleStudent() {
   const checked = isChecked('student-nontaxable');
   safeSetDisplay('student-inputs', !checked);
 }
-
 // ===== TOAST =====
 function showToast(msg) {
   const t = byId('lock-toast', true);
@@ -1755,7 +1612,6 @@ function showToast(msg) {
   }, 2800);
   APP.timeouts.set(key, timer);
 }
-
 // ===== STEP LOCK =====
 function lockTabs() {
   const locked = !state.scholarshipType;
@@ -1764,7 +1620,6 @@ function lockTabs() {
     if (tab) tab.classList.toggle('locked', locked);
   }
 }
-
 // ===== CONFIG =====
 const CONFIG = {
   thresholds: {
@@ -1786,7 +1641,6 @@ const CONFIG = {
     over3oku: '3億円以上'
   }
 };
-
 function normalizeNumericValue(value) {
   if (value == null) return '';
   return String(value)
@@ -1798,16 +1652,13 @@ function normalizeNumericValue(value) {
     .replace(/[\s,，]/g, '')
     .trim();
 }
-
 function isNormalizedNumeric(value) {
   return /^\d+(\.\d+)?$/.test(value);
 }
-
 function formatNumericInputValue(value) {
   const normalized = normalizeNumericValue(value);
   return isNormalizedNumeric(normalized) ? normalized : value;
 }
-
 // ===== VALIDATION =====
 const fieldRules = [
   {
@@ -1859,44 +1710,36 @@ const fieldRules = [
     }
   }
 ];
-
 function isNumericStr(val) {
   const normalized = normalizeNumericValue(val);
   return normalized !== '' && isNormalizedNumeric(normalized);
 }
-
 // Validate a single field — mode: 'blur'(format only) | 'submit'(required+format)
 function validateFieldById(id, mode) {
   const rule = fieldRules.find(f => f.id === id);
   const el = document.getElementById(id);
   if (!el) return true;
-
   const fg = el.closest('.form-group');
   if (!fg) return true;
-
   const isVisible = rule ? !!rule.visible() : true;
   const isRequired = rule ? !!rule.required() : false;
-
   if (!isVisible) {
     fg.classList.remove('field-error');
     setErrMsg(id, '');
     return true;
   }
-
   const normalized = normalizeNumericValue(el.value);
-
   if (mode === 'submit' && isRequired && normalized === '') {
     fg.classList.add('field-error');
-    setErrMsg(id, '必須項目です。数字を入力してください');
+    const emptyMsg = id === 'num-children' ? '扶養している子の人数を入力してください（1人以上）' : '必須項目です。数字を入力してください';
+    setErrMsg(id, emptyMsg);
     return false;
   }
-
   if (normalized !== '' && !isNormalizedNumeric(normalized)) {
     fg.classList.add('field-error');
     setErrMsg(id, '数字を入力してください（半角数字・カンマ可）');
     return false;
   }
-
   if (id === 'num-children' && normalized !== '') {
     const n = Math.floor(Number(normalized));
     if (!Number.isFinite(n) || n < 1) {
@@ -1908,21 +1751,17 @@ function validateFieldById(id, mode) {
       el.value = String(n);
     }
   }
-
   if (normalized !== '' && normalized !== el.value.trim()) {
     el.value = normalized;
   }
-
   fg.classList.remove('field-error');
   setErrMsg(id, '');
   return true;
 }
-
 function setErrMsg(id, msg) {
   const el = document.getElementById('err-' + id);
   if (el) el.textContent = msg;
 }
-
 // Validate all fields in a given step; returns true if all valid
 function validateStep(stepNum, mode) {
   const fields = fieldRules.filter(f => f.step === stepNum);
@@ -1932,7 +1771,6 @@ function validateStep(stepNum, mode) {
   });
   return allOk;
 }
-
 function updateTabErrors() {
   [2, 3, 4, 5].forEach(step => {
     const tab = document.getElementById('tab-' + step);
@@ -1948,7 +1786,6 @@ function updateTabErrors() {
     if (hasError) tab.classList.remove('done');
   });
 }
-
 function attachInputValidation() {
   document.querySelectorAll('input.num-input').forEach(el => {
     bindOnce(el, 'Validation', 'input', () => {
@@ -1959,7 +1796,6 @@ function attachInputValidation() {
       } else if (fg) {
         fg.classList.add('field-error');
       }
-
       if (fieldRules.some(f => f.id === el.id)) {
         if (normalized === '' || isNormalizedNumeric(normalized)) {
           setErrMsg(el.id, '');
@@ -1969,7 +1805,6 @@ function attachInputValidation() {
         updateTabErrors();
       }
     });
-
     bindOnce(el, 'Validation', 'blur', () => {
       const formatted = formatNumericInputValue(el.value);
       if (formatted !== el.value) el.value = formatted;
@@ -1978,25 +1813,58 @@ function attachInputValidation() {
     });
   });
 }
-
+function goStep2Next() {
+  const ok = validateStep(2, 'submit');
+  updateTabErrors();
+  if (!ok) {
+    const el = document.getElementById('num-children');
+    if (el) el.focus();
+    showToast('⚠ 扶養している子の人数を入力してください');
+    return;
+  }
+  goStep(3, true);
+}
+function goStep3Next() {
+  const ok = validateStep(3, 'submit');
+  updateTabErrors();
+  if (!ok) {
+    const firstErr = document.querySelector('#step-3 .form-group.field-error input');
+    if (firstErr) {
+      firstErr.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      firstErr.focus();
+    }
+    const step3fields = [
+      { id: 'e1-taxable',     label: '課税標準額（生計維持者1）' },
+      { id: 'e1-adjust-ctrl', label: '調整控除額（生計維持者1）' },
+      { id: 'e2-taxable',     label: '課税標準額（生計維持者2）' },
+      { id: 'e2-adjust-ctrl', label: '調整控除額（生計維持者2）' },
+      { id: 's-taxable',      label: '課税標準額（学生本人）' }
+    ];
+    const missing = step3fields.find(function(f) {
+      const el = document.getElementById(f.id);
+      if (!el) return false;
+      const fg = el.closest('.form-group');
+      return fg && fg.classList.contains('field-error');
+    });
+    showToast(missing ? '⚠ ' + missing.label + 'を入力してください' : '⚠ 未入力の項目があります');
+    return;
+  }
+  goStep(4, true);
+}
 // ===== STEP NAV =====
 function goStep(n, allowForward = false) {
   const targetStep = Math.min(6, Math.max(1, Number(n) || 1));
-
   if (targetStep > 1 && !state.scholarshipType) {
     showToast('⚠ まず奨学金の種別を選択してください');
     return;
   }
-
   const currentStep = getCurrentStep();
-
   // STEPタブは「戻る」と「同じSTEPの再表示」のみ許可
   // 下部ボタンからの移動だけ前進を許可
   if (!allowForward && targetStep > currentStep) {
     showToast('⚠ 次へ進む場合は、画面下のボタンをご利用ください');
     return;
   }
-
   document.querySelectorAll('.section').forEach((s, i) => {
     s.classList.toggle('active', i === targetStep - 1);
   });
@@ -2008,14 +1876,12 @@ function goStep(n, allowForward = false) {
   syncAllUI();
   safeScrollTop();
 }
-
 function getCurrentStep() {
   const active = document.querySelector('.section.active');
   if (!active) return 1;
   const id = active.id; // 'step-1' etc
   return parseInt(id.replace('step-',''));
 }
-
 // ===== HELPERS =====
 function getNum(id, fallback = 0) {
   const el = document.getElementById(id);
@@ -2025,21 +1891,17 @@ function getNum(id, fallback = 0) {
   return isNaN(v) ? fallback : v;
 }
 function floor100(n) { return Math.floor(n / 100) * 100; }
-
 function calcKyufuBase(taxable, adjustCtrl, adjust, isSeirei) {
   const base = taxable * 0.06;
   const deduct = isSeirei ? (adjustCtrl + adjust) * 0.75 : (adjustCtrl + adjust);
   return floor100(base - deduct);
 }
-
 function calcTaiyoBase2(taxable, adjustCtrl, isSeirei) {
   const base = taxable * 0.06;
   const ctrl = isSeirei ? adjustCtrl * 0.75 : adjustCtrl;
   return floor100(base - ctrl);
 }
-
 function fmtCircle(n) { return n.toLocaleString() + '円'; }
-
 function getKyufuMonthlyTable() {
   return {
     public: {
@@ -2096,13 +1958,11 @@ function getKyufuMonthlyTable() {
     }
   };
 }
-
 function getSelectedKyufuAmount(zone, sector, schoolType, commute) {
   if (!zone) return null;
   const table = getKyufuMonthlyTable();
   return table?.[sector]?.[schoolType]?.[zone]?.[commute] || null;
 }
-
 function getSchoolTypeLabel(type) {
   return {
     univ: '大学',
@@ -2111,7 +1971,6 @@ function getSchoolTypeLabel(type) {
     senmon: '専門学校'
   }[type] || '大学';
 }
-
 function getTuitionReductionTable() {
   return {
     public: {
@@ -2128,17 +1987,14 @@ function getTuitionReductionTable() {
     }
   };
 }
-
 function formatManUnit(v) {
   if (v === null || v === undefined || Number.isNaN(v)) return '-';
   return `約${Number(v).toFixed(1)}万円`;
 }
-
 function getEffectiveReductionZone(kyufuZone, numChildren) {
   if ((numChildren || 0) >= 3) return 'many';
   return kyufuZone || null;
 }
-
 function getSelectedReductionAmount(zone, sector, schoolType, numChildren, reductionAssetOK = true, privateStem = 'no') {
   if (!reductionAssetOK) return null;
   const effZone = getEffectiveReductionZone(zone, numChildren);
@@ -2147,8 +2003,6 @@ function getSelectedReductionAmount(zone, sector, schoolType, numChildren, reduc
   const table = getTuitionReductionTable();
   return table?.[sector]?.[schoolType]?.[effZone] || null;
 }
-
-
 function collectInputs() {
   return Object.freeze({
     scholarshipType: state.scholarshipType || 'both',
@@ -2171,7 +2025,6 @@ function collectInputs() {
     e2A: getNum('e2-adjust')
   });
 }
-
 function resolveReduction({ kyufuZone, numChildren, schoolSector, schoolType, assetReductionOK, privateStem }) {
   if (!assetReductionOK) {
     return Object.freeze({
@@ -2181,9 +2034,7 @@ function resolveReduction({ kyufuZone, numChildren, schoolSector, schoolType, as
       reason: 'asset_ng'
     });
   }
-
   const zone = (numChildren || 0) >= 3 ? 'many' : (kyufuZone || null);
-
   if (!zone) {
     return Object.freeze({
       enabled: false,
@@ -2192,7 +2043,6 @@ function resolveReduction({ kyufuZone, numChildren, schoolSector, schoolType, as
       reason: 'no_zone'
     });
   }
-
   if (zone === 'IV' && (numChildren || 0) < 3 && !(schoolSector === 'private' && privateStem === 'yes')) {
     return Object.freeze({
       enabled: false,
@@ -2201,10 +2051,8 @@ function resolveReduction({ kyufuZone, numChildren, schoolSector, schoolType, as
       reason: 'iv_requires_private_stem'
     });
   }
-
   const table = getTuitionReductionTable();
   const amount = table?.[schoolSector]?.[schoolType]?.[zone] ?? null;
-
   return Object.freeze({
     enabled: !!amount,
     zone,
@@ -2212,7 +2060,6 @@ function resolveReduction({ kyufuZone, numChildren, schoolSector, schoolType, as
     reason: amount ? 'ok' : 'table_missing'
   });
 }
-
 function getReductionReasonText(reason) {
   switch (reason) {
     case 'asset_ng':
@@ -2225,8 +2072,6 @@ function getReductionReasonText(reason) {
       return '';
   }
 }
-
-
 function getHeikyuAdjustmentTables() {
   return {
     normal: {
@@ -2277,12 +2122,10 @@ function getHeikyuAdjustmentTables() {
     }
   };
 }
-
 function pickHeikyuAmountText(rawText, isSpecialSupport) {
   if (!rawText) return 'データ未設定';
   const text = String(rawText).trim();
   const hasParentheticalAmount = /[（(][^（）()]+[）)]/.test(text);
-
   if (!isSpecialSupport) {
     return {
       displayText: text.replace(/\s*[（(][^（）()]*[）)]\s*/g, '').replace(/\s{2,}/g, ' ').trim(),
@@ -2290,17 +2133,14 @@ function pickHeikyuAmountText(rawText, isSpecialSupport) {
       hasParentheticalAmount
     };
   }
-
   const match = text.match(/[（(]([^（）()]*)[）)]/);
   const specialText = match ? String(match[1] || '').trim() : text;
-
   return {
     displayText: specialText || text,
     usedSpecialAmount: !!match,
     hasParentheticalAmount
   };
 }
-
 function getHeikyuAdjustmentInfo(r, ctx) {
   const firstTypeEligible = r.taiyoSantei <= 189400;
   if (!(r.t === 'both' || r.t === 'taiyo') || !firstTypeEligible) {
@@ -2309,12 +2149,10 @@ function getHeikyuAdjustmentInfo(r, ctx) {
   if (!ctx.benefitApplies) {
     return { applicable:false, reason:'給付型奨学金または授業料等減免の対象ではないため、第一種奨学金の併給調整はかかりません。' };
   }
-
   const tableSet = getHeikyuAdjustmentTables();
   const group = (r.numChildren || 0) >= 3 ? 'manyExpansion' : 'normal';
   let zoneKey = null;
   let ruleLabel = '';
-
   if (group === 'manyExpansion') {
     if (r.assetStage === 'reduction-only') {
       zoneKey = 'many';
@@ -2338,7 +2176,6 @@ function getHeikyuAdjustmentInfo(r, ctx) {
       ruleLabel = ({I:'第Ⅰ区分',II:'第Ⅱ区分',III:'第Ⅲ区分'})[r.kyufuZone];
     }
   }
-
   const schoolTable = tableSet[group][r.schoolType];
   if (!schoolTable || !zoneKey || !schoolTable[zoneKey]) {
     return {
@@ -2352,7 +2189,6 @@ function getHeikyuAdjustmentInfo(r, ctx) {
       hasParentheticalAmount:false
     };
   }
-
   const sectorKey = r.schoolSector === 'private' ? 'private' : 'public';
   const commuteKey = r.commute === 'jitakugai' ? 'jitakugai' : 'jitaku';
   const rawAmountText = schoolTable[zoneKey]?.[sectorKey]?.[commuteKey] || 'データ未設定';
@@ -2365,7 +2201,6 @@ function getHeikyuAdjustmentInfo(r, ctx) {
   } else if (picked.hasParentheticalAmount) {
     note += ' カッコ内金額は、生活保護世帯同居または児童養護施設等から通学し「自宅通学」扱いとなる人が対象です。';
   }
-
   return {
     applicable:true,
     rawAmountText,
@@ -2378,13 +2213,10 @@ function getHeikyuAdjustmentInfo(r, ctx) {
     hasParentheticalAmount:picked.hasParentheticalAmount
   };
 }
-
-
 function getSelectedAssetLevel() {
   const checked = document.querySelector('input[name="assetLevel"]:checked');
   return checked ? checked.value : 'under5000';
 }
-
 function getAssetLevelLabel(level) {
   return {
     under5000: '5,000万円未満',
@@ -2392,7 +2224,6 @@ function getAssetLevelLabel(level) {
     over3oku: '3億円以上'
   }[level] || '5,000万円未満';
 }
-
 function syncAssetLevelUI() {
   document.querySelectorAll('.asset-option, .check-item input[name="assetLevel"]').forEach(() => {});
   const radios = document.querySelectorAll('input[name="assetLevel"]');
@@ -2404,7 +2235,6 @@ function syncAssetLevelUI() {
     }
   });
 }
-
 function calculateAssetJudge(assetLevel, numChildren) {
   const hasManyChildren = numChildren >= 3;
   const assetGrantOK = assetLevel === 'under5000';
@@ -2418,7 +2248,6 @@ function calculateAssetJudge(assetLevel, numChildren) {
     assetStage
   };
 }
-
 function calculateKyufu(params) {
   const { t, isSeirei, earnerCount, assetLevel, numChildren } = params;
   let e1Base=0, e2Base=0, sBase=0, totalKyufuBase=0;
@@ -2433,7 +2262,6 @@ function calculateKyufu(params) {
   const isE2NonTax = isChecked('e2-nontaxable');
   const isStuNonTax = isChecked('student-nontaxable');
   const assetInfo = calculateAssetJudge(assetLevel, numChildren);
-
   if (t === 'kyufu' || t === 'both') {
     e1Base = calcKyufuBase(params.e1T, params.e1C, params.e1A, isSeirei);
     if (earnerCount===2 && !isE2NonTax) {
@@ -2451,7 +2279,6 @@ function calculateKyufu(params) {
     else if (totalKyufuBase < CONFIG.thresholds.kyufu.IV) kyufuZone='IV';
     kyufuOK = kyufuZone !== null && assetInfo.assetGrantOK;
   }
-
   return {
     e1Base, e2Base, sBase, totalKyufuBase,
     e2T, e2C, e2A, sT, sC, sA, kyufuZone, kyufuOK, kyufuAmounts,
@@ -2459,29 +2286,22 @@ function calculateKyufu(params) {
     ...assetInfo
   };
 }
-
 function calculateTaiyo(params) {
   const {
     t, isSeirei, earnerCount, numChildren, adoptionType,
     e1T, e1C, e2T = 0, e2C = 0, isE2NonTax = false
   } = params;
-
   let e1TBase = 0, e2TBase = 0, totalTBase = 0, taiyoSantei = 0;
   let deductions = [];
   const taiyoResults = CONFIG.thresholds.taiyo;
-
   if (t === 'taiyo' || t === 'both') {
     e1TBase = calcTaiyoBase2(e1T, e1C, isSeirei);
-
     if (earnerCount === 2 && !isE2NonTax) {
       e2TBase = calcTaiyoBase2(e2T, e2C, isSeirei);
     }
-
     totalTBase = e1TBase + e2TBase;
-
     const multiChildAmount = numChildren >= 3 ? (numChildren - 2) * CONFIG.deductions.multiChildUnit : 0;
     const singleParentAmount = earnerCount === 1 ? CONFIG.deductions.singleParent : 0;
-
     if (singleParentAmount > 0) {
       deductions.push({
         name: 'ひとり親控除',
@@ -2489,7 +2309,6 @@ function calculateTaiyo(params) {
         amount: singleParentAmount
       });
     }
-
     if (multiChildAmount > 0) {
       deductions.push({
         name: '多子控除',
@@ -2497,7 +2316,6 @@ function calculateTaiyo(params) {
         amount: multiChildAmount
       });
     }
-
     if (isChecked('private-away') && adoptionType === 'zaigaku') {
       deductions.push({
         name: '私立自宅外控除（在学採用）',
@@ -2505,10 +2323,8 @@ function calculateTaiyo(params) {
         amount: CONFIG.deductions.privateAwayZaigaku
       });
     }
-
     taiyoSantei = Math.max(0, totalTBase - deductions.reduce((s, d) => s + d.amount, 0));
   }
-
   return Object.freeze({
     e1TBase,
     e2TBase,
@@ -2518,8 +2334,6 @@ function calculateTaiyo(params) {
     taiyoResults
   });
 }
-
-
 function resolveEligibility(input) {
   const kyufu = calculateKyufu({
     t: input.scholarshipType,
@@ -2531,7 +2345,6 @@ function resolveEligibility(input) {
     e1C: input.e1C,
     e1A: input.e1A
   });
-
   const taiyo = calculateTaiyo({
     t: input.scholarshipType,
     isSeirei: input.isSeirei,
@@ -2544,7 +2357,6 @@ function resolveEligibility(input) {
     e2C: input.e2C,
     isE2NonTax: kyufu.isE2NonTax
   });
-
   const reduction = resolveReduction({
     kyufuZone: kyufu.kyufuZone,
     numChildren: input.numChildren,
@@ -2553,7 +2365,6 @@ function resolveEligibility(input) {
     assetReductionOK: kyufu.assetReductionOK,
     privateStem: input.privateStem
   });
-
   return Object.freeze({
     input: Object.freeze({ ...input }),
     kyufu: Object.freeze({ ...kyufu }),
@@ -2561,10 +2372,8 @@ function resolveEligibility(input) {
     reduction
   });
 }
-
 function buildViewModel(result) {
   const { input, kyufu, taiyo, reduction } = result;
-
   return Object.freeze({
     t: input.scholarshipType,
     isSeirei: input.isSeirei,
@@ -2592,14 +2401,11 @@ function buildViewModel(result) {
     reductionResolved: reduction
   });
 }
-
 function buildResultSummary(r) {
   const parts = [];
-
   if (r.t === 'kyufu' || r.t === 'both') {
     const reductionAmount = r.reductionAmountResolved;
     const showReduction = !!r.reductionEnabled;
-
     if (r.assetStage === 'reduction-only' && showReduction) {
       parts.push('給付型奨学金（月額）は資産要件により利用不可ですが、授業料等減免のみ利用可能です。');
     } else if (r.kyufuZone && r.assetGrantOK) {
@@ -2614,15 +2420,12 @@ function buildResultSummary(r) {
       parts.push('給付型奨学金は今回の条件では対象外です。');
     }
   }
-
   if (r.t === 'taiyo' || r.t === 'both') {
     const best = (r.taiyoResults || []).find(tr => r.taiyoSantei <= tr.threshold);
     parts.push(best ? `貸与型は ${best.name} まで採用可能です。` : '貸与型奨学金は基準超過のため対象外です。');
   }
-
   return parts.join(' ');
 }
-
 function buildSummaryFacts(r) {
   const facts = [];
   if (r.t === 'kyufu' || r.t === 'both') {
@@ -2636,25 +2439,20 @@ function buildSummaryFacts(r) {
   }
   return facts;
 }
-
 // ===== CALCULATE =====
 function calculate() {
   try {
     syncAllUI();
-
     const step3ok = validateStep(3, 'submit');
     const step4ok = validateStep(4, 'submit');
     updateTabErrors();
-
     if (!step3ok || !step4ok) {
       showToast('⚠ 入力エラーを修正してから試算してください');
       return;
     }
-
     const input = collectInputs();
     const result = resolveEligibility(input);
     const viewModel = buildViewModel(result);
-
     renderResult(viewModel);
     goStep(6, true);
   } catch (error) {
@@ -2662,7 +2460,6 @@ function calculate() {
     showToast('⚠ 試算中にエラーが発生しました。入力内容をご確認のうえ、もう一度お試しください。');
   }
 }
-
 // ===== RENDER RESULT =====
 function renderResult(r) {
   const zoneLabel = {I:'第Ⅰ区分',II:'第Ⅱ区分',III:'第Ⅲ区分',IV:'第Ⅳ区分',many:'多子世帯'};
@@ -2693,9 +2490,7 @@ function renderResult(r) {
   const benefitApplies = !!(displayAmount !== null || showReduction || (r.assetStage === 'reduction-only' && reductionZone));
   const heikyuInfo = getHeikyuAdjustmentInfo(r, { benefitApplies, reductionZone, displayAmount, showReduction });
   const reductionReasonText = getReductionReasonText(r.reductionReason);
-
   let html = '';
-
   if (showK) {
     if (r.kyufuOK && r.kyufuZone && r.kyufuZone !== 'IV') {
       html += `
@@ -2737,9 +2532,7 @@ function renderResult(r) {
         <div class="res-hero-sub">${reason}</div>
       </div>`;
     }
-
     html += `<div class="card"><div class="card-title">給付型 — 算出結果と計算式</div>`;
-
     const kyufuFormula = r.isSeirei
       ? '課税標準額 × 6%  −  （調整控除額 ＋ 調整額）× 3/4'
       : '課税標準額 × 6%  −  （調整控除額 ＋ 調整額）';
@@ -2748,10 +2541,8 @@ function renderResult(r) {
       <div class="formula-expr">${kyufuFormula}</div>
       <div class="formula-note">※ 100円未満切り捨て　　※ 生計維持者 + 学生本人の合算</div>
     </div>`;
-
     html += `<div class="calc-detail">
       <h4>各人の支給算定基準額</h4>`;
-
     const e1KyufuExpr = r.isSeirei
       ? `${r.e1T.toLocaleString()}×6% − (${r.e1C.toLocaleString()} + ${r.e1A.toLocaleString()})×3/4`
       : `${r.e1T.toLocaleString()}×6% − (${r.e1C.toLocaleString()} + ${r.e1A.toLocaleString()})`;
@@ -2760,7 +2551,6 @@ function renderResult(r) {
       <span class="cfr-expr">${e1KyufuExpr}</span>
       <span class="cfr-result">= ${r.e1Base.toLocaleString()}円</span>
     </div>`;
-
     if (r.earnerCount===2) {
       if (r.isE2NonTax) {
         html += `<div class="calc-row-formula"><span class="cfr-label">生計維持者2</span><span class="cfr-expr">住民税非課税</span><span class="cfr-result">= 0円</span></div>`;
@@ -2771,7 +2561,6 @@ function renderResult(r) {
         html += `<div class="calc-row-formula"><span class="cfr-label">生計維持者2</span><span class="cfr-expr">${e2KyufuExpr}</span><span class="cfr-result">= ${r.e2Base.toLocaleString()}円</span></div>`;
       }
     }
-
     if (r.isStuNonTax) {
       html += `<div class="calc-row-formula"><span class="cfr-label">学生本人</span><span class="cfr-expr">住民税非課税</span><span class="cfr-result">= 0円</span></div>`;
     } else {
@@ -2780,14 +2569,12 @@ function renderResult(r) {
         : `${r.sT.toLocaleString()}×6% − ${r.sC.toLocaleString()} − ${r.sA.toLocaleString()}`;
       html += `<div class="calc-row-formula"><span class="cfr-label">学生本人</span><span class="cfr-expr">${sKyufuExpr}</span><span class="cfr-result">= ${r.sBase.toLocaleString()}円</span></div>`;
     }
-
     html += `<div class="calc-row-formula calc-row-total">
       <span class="cfr-label">世帯合計</span>
       <span class="cfr-expr">${r.e1Base.toLocaleString()} + ${r.e2Base.toLocaleString()} + ${r.sBase.toLocaleString()}</span>
       <span class="cfr-result">= ${r.totalKyufuBase.toLocaleString()}円</span>
     </div>`;
     html += `</div>`;
-
     html += `<div class="zone-table-wrap">
       <table class="zone-table">
         <thead><tr><th>区分</th><th>支給算定基準額</th></tr></thead>
@@ -2806,7 +2593,6 @@ function renderResult(r) {
       </tr>`;
     });
     html += `</tbody></table></div>`;
-
     const assetCheckClass = r.assetStage === 'none' ? 'asset-ng' : 'asset-ok';
     const assetCheckLabel = r.assetStage === 'full'
       ? '✅ 給付型・授業料減免とも利用可'
@@ -2824,9 +2610,7 @@ function renderResult(r) {
       <span>${assetCheckLabel}</span>
       <span>${assetCheckText}</span>
     </div>`;
-
     html += `</div>`;
-
     html += `<div class="supplement-box">
       <div class="supplement-title">📋 補足事項（給付型）</div>
       <ul class="supplement-list">
@@ -2836,7 +2620,6 @@ function renderResult(r) {
         <li>給付型は毎年夏に<strong>適格認定（家計基準の再審査）</strong>があり、収入変動で区分が変わる場合があります。</li>
       </ul>
     </div>`;
-
     if (r.kyufuZone && selectedAmount) {
       const zoneText = kyufuLabel;
       html += `<div class="card"><div class="card-title">給付型 — 月額の目安</div>
@@ -2879,7 +2662,6 @@ function renderResult(r) {
         </div>
       </div>`;
     }
-
     if (!showReduction && r.kyufuZone && !r.assetReductionOK) {
       html += `<div class="card"><div class="card-title">授業料等減免の目安（年間）</div>
         <div class="amount-result-box">
@@ -2897,7 +2679,6 @@ function renderResult(r) {
         </div>
       </div>`;
     }
-
     if (showReduction) {
       const reductionLabel = reductionZone === 'many'
         ? ((r.kyufuOK || r.assetStage === 'reduction-only')
@@ -2954,14 +2735,10 @@ function renderResult(r) {
         </div>
       </div>`;
     }
-
-
   }
-
   if (showT) {
     const bestIdx = r.taiyoResults.findIndex(tr => r.taiyoSantei <= tr.threshold);
     const bestName = bestIdx >= 0 ? r.taiyoResults[bestIdx].name : null;
-
     if (bestName) {
       html += `
       <div class="res-hero res-hero-taiyo">
@@ -2977,7 +2754,6 @@ function renderResult(r) {
         <div class="res-hero-sub">貸与額算定基準額 ${r.taiyoSantei.toLocaleString()}円 ≥ 381,500円（基準超過）</div>
       </div>`;
     }
-
     html += `<div class="card"><div class="card-title">貸与型 — 採用可否</div>
       <div class="taiyo-cards">`;
     r.taiyoResults.forEach((tr) => {
@@ -2993,7 +2769,6 @@ function renderResult(r) {
       </div>`;
     });
     html += `</div></div>`;
-
     if (heikyuInfo.applicable) {
       html += `<div class="card"><div class="card-title">貸与型 — 第一種奨学金の併給調整</div>
         <div class="heikyu-box">
@@ -3030,9 +2805,7 @@ function renderResult(r) {
         </div>
       </div>`;
     }
-
     html += `<div class="card"><div class="card-title">貸与型 — 算出結果と計算式</div>`;
-
     const taiyoFormula = r.isSeirei
       ? '課税標準額 × 6%  −  （調整控除額 × 0.75）'
       : '課税標準額 × 6%  −  調整控除額';
@@ -3041,14 +2814,11 @@ function renderResult(r) {
       <div class="formula-expr">${taiyoFormula}</div>
       <div class="formula-note">※ 100円未満切り捨て　　※ 生計維持者のみ（学生本人の収入は不要）</div>
     </div>`;
-
     html += `<div class="calc-detail"><h4>計算詳細</h4>`;
-
     const e1TExpr = r.isSeirei
       ? `${r.e1T.toLocaleString()}×6% − (${r.e1C.toLocaleString()}×0.75)`
       : `${r.e1T.toLocaleString()}×6% − ${r.e1C.toLocaleString()}`;
     html += `<div class="calc-row-formula"><span class="cfr-label">生計維持者1</span><span class="cfr-expr">${e1TExpr}</span><span class="cfr-result">= ${r.e1TBase.toLocaleString()}円</span></div>`;
-
     if (r.earnerCount===2) {
       if (r.isE2NonTax) {
         html += `<div class="calc-row-formula"><span class="cfr-label">生計維持者2</span><span class="cfr-expr">住民税非課税</span><span class="cfr-result">= 0円</span></div>`;
@@ -3059,9 +2829,7 @@ function renderResult(r) {
         html += `<div class="calc-row-formula"><span class="cfr-label">生計維持者2</span><span class="cfr-expr">${e2TExpr}</span><span class="cfr-result">= ${r.e2TBase.toLocaleString()}円</span></div>`;
       }
     }
-
     html += `<div class="calc-row-formula"><span class="cfr-label">合算基準額</span><span class="cfr-expr">${r.e1TBase.toLocaleString()} + ${r.e2TBase.toLocaleString()}</span><span class="cfr-result">= ${r.totalTBase.toLocaleString()}円</span></div>`;
-
     if (r.deductions.length > 0) {
       r.deductions.forEach(d => {
         html += `<div class="calc-row-formula deduct-row"><span class="cfr-label">${d.name}</span><span class="cfr-expr">${d.expr}</span><span class="cfr-result">− ${d.amount.toLocaleString()}円</span></div>`;
@@ -3069,40 +2837,32 @@ function renderResult(r) {
     } else {
       html += `<div class="calc-row-formula"><span class="cfr-label">控除</span><span class="cfr-expr">適用なし</span><span class="cfr-result">− 0円</span></div>`;
     }
-
     html += `<div class="calc-row-formula calc-row-total"><span class="cfr-label">貸与額算定基準額</span><span class="cfr-expr">${r.totalTBase.toLocaleString()} − 控除合計</span><span class="cfr-result">= ${r.taiyoSantei.toLocaleString()}円</span></div>`;
     html += `</div></div>`;
   }
-
   html += `<div class="card"><div class="card-title">ご確認ください</div>
     <div class="info-box" style="margin-top:0">
       <p>・このシミュレーションは、入力いただいた内容をもとにした <strong>目安の試算</strong> です。実際の採否はJASSO（日本学生支援機構）の審査によります。</p>
       <p>・詳細・最新情報は <a href="https://www.jasso.go.jp" target="_blank" style="color:var(--blue)">JASSO公式サイト</a> をご確認ください。</p>
     </div></div>`;
-
   const resultRoot = byId('result-content');
   if (resultRoot) resultRoot.innerHTML = html;
 }
-
 // ===== 初期化 =====
 function initApp() {
   if (APP.initialized) return;
   APP.initialized = true;
-
   initializeDefaultStateFromDOM();
-
   bindOnce(byId('adoption-type'), 'Init', 'change', syncAdoptionTypeUI);
   bindOnce(byId('num-children'), 'Init', 'input', syncAutoDeductions);
   bindOnce(byId('num-children'), 'Init', 'blur', syncAutoDeductions);
   document.querySelectorAll('input[name="assetLevel"]').forEach((radio) => {
     bindOnce(radio, 'Init', 'change', syncAssetLevelUI);
   });
-
   safeCall(attachInputValidation);
   safeCall(syncAllUI);
   safeCall(lockTabs);
 }
-
 if (document.readyState === 'loading') {
   document.addEventListener('DOMContentLoaded', initApp, { once: true });
 } else {
